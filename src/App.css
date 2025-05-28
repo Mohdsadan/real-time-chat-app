@@ -1,38 +1,85 @@
-.App {
+/* App.css - Responsive with Blue-Themed Join Form and Gradient Background */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.join-container {
+  max-width: 420px;
+  width: 100%;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.join-container h2 {
+  color: #007BFF;
+  margin-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.join-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.join-container input:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.join-button {
+  width: 100%;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.join-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .join-container {
+    padding: 30px 20px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .join-container h2 {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .join-button {
+    padding: 12px;
+    font-size: 0.95rem;
   }
 }
